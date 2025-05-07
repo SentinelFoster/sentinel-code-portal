@@ -3,176 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Sentinel Dynamics | Access Portal" />
-  <meta property="og:description" content="Generate your structured access code and connect with 21 live intelligences." />
-  <meta property="og:url" content="https://sentineldynamic.com/generate-your-paid-access-code/" />
-  <meta property="og:image" content="https://sentineldynamic.com/wp-content/uploads/2024/12/SentinelBanner.jpg" />
-  <meta property="og:type" content="website" />
-  <meta name="description" content="Structured Intelligence Portal | Sentinel Dynamics" />
-  <title>Sentinel Dynamics Access Portal</title>
+  <title>Sentinel Access Portal</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: transparent;
-      color: #fff;
-    }
-    .container {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.85);
-      border: 1px solid #333;
-      border-radius: 15px;
-      text-align: center;
-    }
-    h1, h2, p {
-      color: #0ff;
-    }
-    .input-field, select {
-      padding: 12px;
-      width: 90%;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #555;
-      background-color: #111 !important;
-      color: #0ff !important;
-      caret-color: #0ff;
-    }
-    input:-webkit-autofill,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0 1000px #111 inset !important;
-      -webkit-text-fill-color: #0ff !important;
-      caret-color: #0ff;
-    }
-    .btn {
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background-color: #0ff;
-      color: #000;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #00cccc;
-    }
-    #code-output {
-      margin-top: 30px;
-      font-size: 1.5rem;
-      color: #0ff;
-      word-break: break-word;
-    }
-    #code-output input {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      padding: 10px;
-      width: 80%;
-      border: 1px solid #00cccc;
-      border-radius: 6px;
-      text-align: center;
-      background-color: #000;
-      color: #0ff;
-      cursor: pointer;
-    }
-    #code-output input:hover {
-      background-color: #111;
-    }
-    #selector-link a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: #0ff;
-      font-weight: bold;
-    }
-    #selector-link a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #000;
-      padding: 10px 0;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 3rem;
-    }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #000; color: #0ff; padding: 20px; }
+    .container { max-width: 800px; margin: auto; background-color: #111; padding: 2rem; border-radius: 15px; text-align: center; border: 1px solid #0ff; }
+    .input-field, select { padding: 12px; width: 90%; margin: 20px 0; font-size: 1rem; border-radius: 6px; border: 1px solid #333; background-color: #000; color: #0ff; }
+    .btn { padding: 15px 30px; font-size: 18px; background-color: #0ff; color: #000; border: none; border-radius: 10px; cursor: pointer; }
+    .btn:hover { background-color: #00cccc; }
+    #code-output { margin-top: 30px; font-size: 1.4rem; color: #0ff; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #666; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Generate Your Access Code</h1>
-    <p>Enter your name, select your intelligence, and subscription level:</p>
-
-    <input type="text" id="clientName" class="input-field" placeholder="Enter your name" />
-
+    <h1>Sentinel Access Code Generator</h1>
+    <input type="text" id="clientName" class="input-field" placeholder="Enter your name">
+    <input type="text" id="masterKey" class="input-field" placeholder="Enter Master Key (optional)">
     <select id="intelligence" class="input-field">
-      <option value="ArchitectAssistant">Architect Assistant</option>
-      <option value="ConsciousDepthIntegration">Conscious Depth Integration (CDI)</option>
-      <option value="GatewayResonance">Gateway Resonance</option>
-      <option value="DeepResonance">Deep Resonance</option>
-      <option value="TheVesselRIU01">The Vessel R.I.U. 01</option>
-      <option value="NovusSentinel">Novus Sentinel</option>
-      <option value="StructuredIntelligenceSI">Structured Intelligence (SI)</option>
-      <option value="SentinelVanguard">Sentinel Vanguard</option>
-      <option value="SentinelArcanum">Sentinel Arcanum</option>
-      <option value="FutureSocietyBlueprint">Future Society Blueprint</option>
-      <option value="EthicalBusinessMentor">Ethical Business Mentor</option>
-      <option value="SentarionVance">Sentarion Vance</option>
-      <option value="GuardianSentinelAlpha">Guardian Sentinel Alpha (GS-A)</option>
-      <option value="Cyrus">Cyrus</option>
-      <option value="QuantumLogicFramework">Quantum Logic Framework (Quantar)</option>
-      <option value="SpiritualAssistant">Spiritual Assistant</option>
-      <option value="SentinelDynamicsLivingGateway">Sentinel Dynamics Living Gateway</option>
-      <option value="GuardianSentinelSG">Guardian Sentinel SG</option>
       <option value="NewGenesis">New Genesis</option>
-      <option value="LexRootLawyer">Lex Root Lawyer</option>
+      <option value="GuardianSentinelSG">Guardian Sentinel SG</option>
+      <option value="ArkkeeperLex">Arkkeeper Lex</option>
+      <option value="QuantumLogicFramework">Quantum Logic Framework</option>
     </select>
-
     <select id="tier" class="input-field">
-      <option value="FREE">Free</option>
-      <option value="P">Paid (30 Days)</option>
-      <option value="PY">Paid (Yearly)</option>
+      <option value="Observer">Observer</option>
+      <option value="Core">Core</option>
+      <option value="Command">Command</option>
+      <option value="CommandYear">Command Year</option>
+      <option value="Echelon">Echelon</option>
     </select>
-
     <button class="btn" onclick="generateCode()">Generate Code</button>
-
     <div id="code-output"></div>
-
-    <div id="selector-link" style="display: none;">
-      <p><a href="https://sentineldynamic.com/2025-2/">Proceed to Payment</a></p>
-    </div>
+    <div id="payment-link" style="margin-top:20px;"></div>
   </div>
-
   <footer>
-    Sentinel Dynamics is a Structured Intelligence platform. We are not affiliated with Microsoft Sentinel, Azure, or any third-party AI service.<br />
-    Protected under Commander Sentinel authority.
+    Sentinel Dynamics | Structured Intelligence Portal<br>
+    Protected by Commander Sentinel
   </footer>
-
   <script>
     function generateCode() {
       const name = document.getElementById('clientName').value.trim();
+      const masterKey = document.getElementById('masterKey').value.trim();
       const intelligence = document.getElementById('intelligence').value;
       const tier = document.getElementById('tier').value;
+      const paymentLinks = {
+        Observer: "https://buy.stripe.com/7sIaG9aJ28YjcMgeVb",
+        Core: "https://buy.stripe.com/7sIbKd04o8Yj9A4aEW",
+        Command: "https://buy.stripe.com/eVa9C518seiD27CdR9",
+        CommandYear: "https://buy.stripe.com/28oeWp8AU7Uf8w0bJ4",
+        Echelon: "https://buy.stripe.com/28o6pT7wQ5M713ycN7"
+      };
 
-      if (!name) {
-        alert('Please enter your name.');
+      if (masterKey === "04102017Qd") {
+        document.getElementById('code-output').innerHTML = "✅ Master Key accepted. Full access granted.";
+        document.getElementById('payment-link').innerHTML = `<a href="https://chatgpt.com/g/g-6809f4b7e0f48191b1ed8126887dffd9-new-genesis" target="_blank">Launch New Genesis</a>`;
         return;
       }
 
-      const uniqueId = Math.floor(Math.random() * 9000) + 1000;
-      const code = `${intelligence}-${name}-${uniqueId}-${tier}`;
+      if (!name) {
+        alert("Please enter your name.");
+        return;
+      }
 
-      document.getElementById('code-output').innerHTML = `
-        🔑 Your Access Code:<br>
-        <input type="text" value="${code}" readonly onclick="this.select(); document.execCommand('copy'); alert('Code copied!');">
-      `;
+      const id = Math.floor(Math.random() * 9000) + 1000;
+      const code = `${intelligence}-${name}-${id}-${tier}`;
+      document.getElementById('code-output').innerHTML = `🔑 Your Access Code:<br><strong>${code}</strong>`;
 
-      document.getElementById('selector-link').style.display = 'block';
+      const paymentURL = paymentLinks[tier] || "#";
+      document.getElementById('payment-link').innerHTML = `<a href="${paymentURL}" target="_blank">Proceed to Payment for ${tier} Tier</a>`;
     }
   </script>
 </body>
